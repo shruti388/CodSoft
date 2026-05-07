@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: rgb(247, 231, 232);
+    }
+
+    .menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      background-color: #ec95d4;
+      border: 2px solid rgb(152, 3, 75);
+      flex-wrap: wrap;
+    }
+
+    .name {
+      font-size: 22px;
+      font-weight: bold;
+      color: rgb(148, 1, 72);
+    }
+
+    .links {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .links a {
+      text-decoration: none;
+      color: black;
+      font-size: 18px;
+    }
+
+    .links a:hover {
+      color: blue;
+    }
+
+    #heading {
+      text-align: center;
+      margin: 30px 0;
+      font-size: large;
+    }
+
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      justify-items: center;
+      margin: 20px;
+      padding: 5px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 250px;
+      text-align: center;
+      transition: transform 0.3s;
+
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .card h2 {
+      margin: 10px 0 0 0;
+      font-size: 18px;
+      color: #333;
+    }
+
+    @media (max-width: 1024px) {
+      .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .menu {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .projects-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .delay1 {
+      animation-delay: 0.3s;
+    }
+
+    .delay2 {
+      animation-delay: 0.6s;
+    }
+
+    .delay3 {
+      animation-delay: 0.9s;
+    }
+
+    .delay4 {
+      animation-delay: 1.2s;
+    }
+
+    .delay5 {
+      animation-delay: 1.5s;
+    }
+
+    .delay6 {
+      animation-delay: 1.8s;
+    }
+
+    .delay7 {
+      animation-delay: 2.1s
+    }
+
+    .delay8 {
+      animation-delay: 2.4s;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="menu fade-in delay1">
+    <div class="name">Shruti Yewale</div>
+    <div class="links">
+      <a href="index.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="project.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+
+  <div id="heading" class="fade-in delay2">
+    <h2>Projects</h2>
+  </div>
+
+  <div class="projects-container">
+    <div class="card fade-in delay3">
+      <a href="https://shruti388.github.io/weather-final-boss/">
+        <img src="project1.png" alt="Weather App">
+      </a>
+      <h2>Weather App</h2>
+    </div>
+
+    <div class="card fade-in delay4">
+      <a href="https://shruti388.github.io/pokemon-Image-Generator/">
+        <img src="project2.png" alt="Pokémon Image Generator">
+      </a>
+      <h2>Pokemon Image Generator</h2>
+    </div>
+
+    <div class="card fade-in delay5">
+      <a href="https://shruti388.github.io/Fox-Image-generator/">
+        <img src="project3.png" alt="Fox Image Generator">
+      </a>
+      <h2>Fox Image Generator</h2>
+    </div>
+
+    <div class="card fade-in delay6">
+      <a href=" https://shruti388.github.io/vsFinalBoss/">
+        <img src="project4.png" alt="VS Code Clone">
+      </a>
+      <h2>VS Code Clone</h2>
+    </div>
+  </div>
+
+  <div class="projects-container">
+    <div class="card fade-in delay7">
+      <a href="https://shruti388.github.io/dribblefinal/">
+        <img src="project5.png" alt="Dribbble Clone">
+      </a>
+      <h2>Dribbble Clone</h2>
+    </div>
+
+    <div class="card fade-in delay8">
+      <a href="https://weatherappbyshrutiyewale.netlify.app/">
+        <img src="project6.png" alt="Weather App">
+      </a>
+      <h2>Weather App</h2>
+    </div>
+  </div>
+
+</body>
+
+</html> 

@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Information</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: rgb(247, 231, 232);
+      margin: 0;
+    }
+
+    #menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      background-color: #ec95d4;
+      border: 2px solid rgb(152, 3, 75);
+    }
+
+    #name {
+      font-size: 22px;
+      font-weight: bold;
+      color: rgb(148, 1, 72);
+    }
+
+    #email-under-name {
+      font-size: 14px;
+      color: #333;
+    }
+
+    #name-email {
+      font-size: 14px;
+      font-weight: normal;
+      color: #333;
+    }
+
+    #links {
+      display: flex;
+      gap: 30px;
+    }
+
+    #links a {
+      text-decoration: none;
+      color: black;
+      font-size: 18px;
+    }
+
+    #links a:hover {
+      color: blue;
+    }
+
+    #name-section {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    #menu-email {
+      font-size: 14px;
+      color: #333;
+    }
+
+    #contact-section {
+      max-width: 500px;
+      margin: 50px auto;
+      margin-right: 390px;
+    }
+
+    #email-item,
+    #phone-item,
+    #location-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    #email-icon,
+    #phone-icon,
+    #location-icon {
+      background-color: #f5f5f5;
+      padding: 8px;
+      border-radius: 8px;
+      margin-right: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #email-icon svg,
+    #phone-icon svg,
+    #location-icon svg {
+      width: 20px;
+      height: 25px;
+      fill: #8a4dff;
+    }
+
+    #email-details,
+    #phone-details,
+    #location-details {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #email-label,
+    #phone-label,
+    #location-label {
+      font-size: 1em;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    #email-text,
+    #phone-text,
+    #location-text {
+      font-size: 0.95em;
+      color: #555;
+    }
+
+    #contact-form {
+      background: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      margin-right: -85px;
+    }
+
+    #form-group {
+      margin-bottom: 15px;
+    }
+
+    #form-label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    #form-input,
+    #form-textarea {
+      width: 90%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    #form-textarea {
+      height: 100px;
+      resize: none;
+    }
+
+    #form-row div {
+      flex: 1;
+    }
+
+    #form-button {
+      width: 100%;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: white;
+      height: 40px;
+      border-radius: 10px;
+      font-size: medium;
+      border: #6a11cb;
+    }
+
+    #contact-section-form {
+      display: flex;
+      justify-content: center;
+    }
+
+    .wrap {
+      max-width: 1500px;
+      margin: 0 auto;
+      padding: 56px 24px;
+      background-color: #f067c9;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 100px;
+    }
+
+    .title {
+      line-height: 1.1;
+    }
+
+    .name {
+      margin: 0 0 10px;
+      color: rgb(152, 3, 75);
+    }
+
+    .tagline {
+      margin: 0;
+      color: darkblue;
+      font-weight: bold;
+      font-size: large;
+    }
+
+    .icons {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .icons a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      opacity: .85;
+      color: rgb(165, 39, 39);
+    }
+
+    .icons a:hover {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+
+    .icons img {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+    }
+
+    form {
+      margin-bottom: 30px;
+    }
+
+    .icons svg {
+      fill: rgb(255, 255, 255);
+    }
+
+    .icons svg:hover {
+      fill: #000;
+    }
+
+    @media (max-width: 768px) {
+      #menu {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      #links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      #contact-section {
+        margin: 20px auto;
+        padding: 0 10px;
+        max-width: 100%;
+      }
+
+      #contact-form {
+        width: 100%;
+        margin: 20px auto;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+      }
+
+      .icons {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #name {
+        font-size: 18px;
+      }
+
+      #links a {
+        font-size: 16px;
+      }
+
+      #form-input,
+      #form-textarea {
+        width: 100%;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .delay1 {
+      animation-delay: 0.3s;
+    }
+
+    .delay2 {
+      animation-delay: 0.6s;
+    }
+
+    .delay3 {
+      animation-delay: 0.9s;
+    }
+
+    .delay4 {
+      animation-delay: 1.2s;
+    }
+
+    .delay5 {
+      animation-delay: 1.5s;
+    }
+
+    .delay6 {
+      animation-delay: 1.8s;
+    }
+
+    .delay7 {
+      animation-delay: 2.1s;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="menu">
+    <div id="name">Shruti Yewale</div>
+    <div id="links">
+      <a href="index.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="project.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+
+  <div id="contact-section">
+    <h2 id="contact-heading" class="fade-in delay1">Contact Information</h2>
+
+    <div id="email-item" class="fade-in delay2">
+      <div id="email-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path
+            d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2v.01L12 13 4 6.01V6h16z" />
+        </svg>
+      </div>
+      <div id="email-details">
+        <strong id="email-label">Email</strong>
+        <span id="email-text">shrutiyewale219@gmail.com</span>
+      </div>
+    </div>
+
+    <div id="phone-item" class="fade-in delay3">
+      <div id="phone-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path
+            d="M6.6 10.8a15.05 15.05 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.36 11.36 0 0 0 3.56.56 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.21.19 2.39.56 3.56a1 1 0 0 1-.24 1l-2.22 2.24z" />
+        </svg>
+      </div>
+      <div id="phone-details">
+        <strong id="phone-label">Phone</strong>
+        <span id="phone-text">+91 9325662816</span>
+      </div>
+    </div>
+
+    <div id="location-item" class="fade-in delay4">
+      <div id="location-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path
+            d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" />
+        </svg>
+      </div>
+      <div id="location-details">
+        <strong id="location-label">Location</strong>
+        <span id="location-text">Pune, Maharashtra, India</span>
+      </div>
+    </div>
+  </div>
+
+  <section id="contact-section-form" class="fade-in delay5">
+    <form id="contact-form" class="fade-in delay6">
+      <div id="form-row">
+        <div id="form-group">
+          <label id="form-label">Name</label>
+          <input type="text" id="form-input" placeholder="Your name">
+        </div>
+        <div id="form-group">
+          <label id="form-label">Email</label>
+          <input type="email" id="form-input" placeholder="Your email">
+        </div>
+      </div>
+
+      <div id="form-group">
+        <label id="form-label">Subject</label>
+        <input type="text" id="form-input" placeholder="Subject of your message">
+      </div>
+
+      <div id="form-group">
+        <label id="form-label">Message</label>
+        <textarea id="form-textarea" placeholder="Type your message here"></textarea>
+      </div>
+
+      <button type="submit" id="form-button">Send Message</button>
+    </form>
+  </section>
+  </div>
+  <div class="wrap fade-in delay7">
+    <header>
+      <div class="title">
+        <h1 class="name">Shruti Yewale</h1>
+        <p class="tagline">Front-End Developer</p>
+      </div>
+
+
+      <nav class="icons">
+
+        <a href="https://github.com/">
+
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#A7B0BE" width="24" height="24">
+            <path
+              d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.11.79-.25.79-.56v-2.02c-3.22.7-3.9-1.4-3.9-1.4-.52-1.32-1.28-1.67-1.28-1.67-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.57-.29-5.27-1.29-5.27-5.74 0-1.27.46-2.31 1.2-3.12-.12-.29-.52-1.47.11-3.06 0 0 .98-.31 3.21 1.19a11.1 11.1 0 0 1 5.85 0c2.23-1.5 3.2-1.19 3.2-1.19.63 1.59.23 2.77.12 3.06.75.81 1.2 1.85 1.2 3.12 0 4.46-2.71 5.44-5.29 5.73.41.35.78 1.04.78 2.1v3.11c0 .31.21.68.8.56A11.5 11.5 0 0 0 12 .5z" />
+          </svg>
+        </a>
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#A7B0BE" width="24" height="24">
+          <path
+            d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5zM3.5 9h3v12h-3zM9 9h2.9v1.64h.04c.4-.74 1.37-1.52 2.83-1.52 3.03 0 3.6 1.99 3.6 4.58V21H15.4v-5.35c0-1.28-.02-2.93-1.78-2.93-1.78 0-2.06 1.39-2.06 2.83V21H9z" />
+        </svg>
+        </a>
+      </nav>
+    </header>
+    <hr>
+  </div>
+  <script>
+    const name = document.getElementById("form-input");
+    const email = document.getElementById("form-input");
+    const subject = document.getElementById("form-input");
+    const formbutton = document.getElementById("form-button");
+    const message = document.getElementById("form-textarea");
+
+    document.getElementById("contact-form").addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById("form-input").value;
+      const email = document.getElementById("form-input").value;
+      const subject = document.getElementById("form-input").value;
+      const message = document.getElementById("form-textarea").value;
+
+      if (!name || !email || !subject || !message) {
+        alert("Please fill the fields");
+      } else {
+        alert("Form submitted succesfully!");
+      }
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

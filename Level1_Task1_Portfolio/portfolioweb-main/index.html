@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: rgb(247, 231, 232);
+    }
+
+    .menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      background-color: #ec95d4;
+      border: 2px solid rgb(152, 3, 75);
+      flex-wrap: wrap;
+    }
+
+    .name {
+      font-size: 22px;
+      font-weight: bold;
+      color: rgb(148, 1, 72);
+    }
+
+    .links {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .links a {
+      text-decoration: none;
+      color: black;
+      font-size: 18px;
+    }
+
+    .links a:hover {
+      color: blue;
+    }
+
+    .photo {
+      display: flex;
+      justify-content: center;
+      margin-top: 60px;
+    }
+
+    .photo img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      border: 2px solid rgb(174, 71, 71);
+    }
+
+    .headline {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      color: rgb(152, 3, 75);
+    }
+
+    .headline2 {
+      text-align: center;
+    }
+
+    .para-wrap {
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .para-main {
+      background: rgb(255, 196, 205);
+      width: 520px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px auto;
+      text-align: center;
+      border: 3px solid rgb(152, 3, 75);
+      border-radius: 10px;
+
+      transition: transform 0.3s ease; 
+    }
+
+    .para-main:hover {
+      transform: translateY(-5px);
+    }
+
+    @media (max-width: 768px) {
+      .menu {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .links {
+        justify-content: center;
+        gap: 15px;
+        margin-top: 10px;
+      }
+
+      .para-main {
+        max-width: 95%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .para-main {
+        max-width: 90%;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .delay1 {
+      animation-delay: 0.3s;
+    }
+
+    .delay2 {
+      animation-delay: 0.6s;
+    }
+
+    .delay3 {
+      animation-delay: 0.9s;
+    }
+
+    .delay4 {
+      animation-delay: 1.2s;
+    }
+
+    .delay5 {
+      animation-delay: 1.5s;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="menu fade-in delay1">
+    <div class="name">Shruti Yewale</div>
+    <div class="links">
+      <a href="index.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="project.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+
+  <div class="photo fade-in delay2">
+    <img src="photo img.jpg" alt="Profile Photo">
+  </div>
+  <h1 class="headline fade-in delay3">Hi, I'm Shruti Yewale</h1>
+  <h2 class="headline2 fade-in delay4">Front End Developer</h2>
+
+  <div class="para-wrap fade-in delay5">
+    <div class="para-main">
+      <p>I'm a passionate Front-End Developer with strong interest in creating websites Skilled in HTML, CSS,
+        Javascript, React.js, TailwindCSS and I enjoy turning ideas into interactive designs and always up for
+        learning.</p>
+    </div>
+  </div>
+</body>
+
+</html>
